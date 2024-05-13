@@ -11,13 +11,13 @@ given GWAS and single cell RNA-sequencing data.
 ## About
 
 Integrating single-cell RNA sequencing (scRNA-seq) with Genome-Wide Association
-Studies (GWAS) can help reveal GWAS-associated cell types furthering our
+Studies (GWAS) can help reveal GWAS-associated cell types, furthering our
 understanding of the cell-type-specific biological processes underlying complex
 traits and disease. In order to rapidly and accurately pinpoint associations, we
 develop a novel framework, _seismic_, which characterizes cell types using a new
 specificity score. As part of the _seismic_ framework, the specific genes driving
 cell type-trait associations can easily be accessed and analyzed, enabling further
-biological insights. The following figure depicts a high level overview of
+biological insights. The following figure depicts a high-level overview of
 this process. 
 
 ![method overview](man/figures/seismic_overview.png)
@@ -26,18 +26,18 @@ this process.
 To install the seismic package first clone the seismic repo and then 
 use devtools within R to point to seismic and install.
 
-```R
+```r
 devtools::install(path_to_seismic_folder)
 library('seismicGWAS')
 ```
 
 ## Usage
-Below we quickly show how to use `seismicGWAS` to calcuate cell
+Below we quickly show how to use `seismicGWAS` to calculate cell
 type-trait associations for the sample data included in the package. 
 Full usage instructions, including a walk through of all major functions
 can be found in the vignette.
 
-```R
+```r
 # calculate cell type specificity scores using included sample data
 tmfacs_sscore <- calc_specificity(tmfacs_sce_small, ct_label_col='cluster_name')
 
